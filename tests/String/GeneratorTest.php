@@ -39,4 +39,11 @@ class StringGeneratorTests extends PHPUnit_Framework_TestCase {
 
         $this->assertTrue($allSpecial);
     }
+
+    /**
+     * @expectedException Exception
+     */
+    public function testGeneratorThrowsExceptionWithInvalidType() {
+        Generator::random(20, 1000);
+    }
 }
