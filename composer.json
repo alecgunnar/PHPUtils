@@ -1,0 +1,19 @@
+{
+    "name": "gunnar94/phputils",
+    "keywords": ["random", "php", "functions"],
+    "authors": [
+        {
+            "name": "Alec Carpenter",
+            "email": "gunnar94@me.com",
+            "homepage": "http://www.aleccarpenter.me"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "PHPUtils": "src"
+        }
+    }
+}
