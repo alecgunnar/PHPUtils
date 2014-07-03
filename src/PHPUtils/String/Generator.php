@@ -45,9 +45,9 @@ class Generator {
      */
     public static function random($length, $type=0) {
         $alphaUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $alphaLower = 'abcdefghjkklmnopqrstuvwxyz';
+        $alphaLower = 'abcdefghijklmnopqrstuvwxyz';
         $numeric    = '1234567890';
-        $special    = '!@#$%^&*()_+-={}|[]\\:";\'<>?,./';
+        $special    = '!@#$%^&*()_+-={}|[]\:";\'<>?,./';
 
         $possibilities = '';
 
