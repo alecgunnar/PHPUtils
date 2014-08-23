@@ -75,7 +75,7 @@ class Generator {
         $numPossibilities = strlen($possibilities);
 
         while(strlen($randomStr) < $length) {
-            $randomStr .= $possibilities[rand(0, $numPossibilities)];
+            $randomStr .= $possibilities[rand(0, $numPossibilities - 1)];
         }
 
         return $randomStr;
