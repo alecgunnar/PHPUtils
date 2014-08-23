@@ -1,5 +1,6 @@
 {
     "name": "gunnar94/phputils",
+    "version": "1.0.0",
     "keywords": ["random", "php", "functions"],
     "authors": [
         {
