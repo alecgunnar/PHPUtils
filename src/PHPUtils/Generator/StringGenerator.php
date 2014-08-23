@@ -6,9 +6,9 @@
  * @author Alec Carpenter <gunnar94@me.com>
  */
 
-namespace PHPUtils\String;
+namespace PHPUtils\Generator;
 
-class Generator {
+class StringGenerator {
     /**
      * Instructs to generate random string of alpha characters
      *
@@ -68,7 +68,7 @@ class Generator {
                     throw new \Exception('Invalid random string type.');
             }
         } else {
-            $possibilities = $alphaUpper . $alphaLower . $numerical . $special;
+            $possibilities = $alphaUpper . $alphaLower . $numeric . $special;
         }
 
         $randomStr        = '';

@@ -1,31 +1,31 @@
 <?php
 
-use PHPUtils\String\Generator;
+use PHPUtils\Generator\StringGenerator;
 
 class StringGeneratorTests extends PHPUnit_Framework_TestCase {
     public function testGenerateRandomString() {
         $length = 20;
-        $string = Generator::random(20);
+        $string = StringGenerator::random(20);
 
         $this->assertTrue(is_string($string) && (strlen($string) == $length));
     }
 
     public function testGenerateRandomAlphaString() {
-        $this->assertTrue(ctype_alpha(Generator::random(20, Generator::ALPHA)));
+        $this->assertTrue(ctype_alpha(StringGenerator::random(20, StringGenerator::ALPHA)));
     }
 
     public function testGenerateRandomNumericString() {
-        $string = Generator::random(20, Generator::NUMERIC);
+        $string = StringGenerator::random(20, StringGenerator::NUMERIC);
 
         $this->assertTrue(is_string($string) && is_numeric($string));
     }
 
     public function testGenerateRandomAlphaNumericString() {
-        $this->assertTrue(ctype_alnum(Generator::random(20, Generator::ALPHANUMERIC)));
+        $this->assertTrue(ctype_alnum(StringGenerator::random(20, StringGenerator::ALPHANUMERIC)));
     }
 
     public function testGenerateRandomSpecialString() {
-        $string = Generator::random(20, GENERATOR::SPECIAL);
+        $string = StringGenerator::random(20, StringGenerator::SPECIAL);
 
         $allSpecial = true;
 
@@ -44,6 +44,6 @@ class StringGeneratorTests extends PHPUnit_Framework_TestCase {
      * @expectedException Exception
      */
     public function testGeneratorThrowsExceptionWithInvalidType() {
-        Generator::random(20, 1000);
+        StringGenerator::random(20, 1000);
     }
 }
